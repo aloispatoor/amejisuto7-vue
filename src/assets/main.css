@@ -1,0 +1,137 @@
+/* SET UP */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: VictorMono;
+    src: url(../assets/fonts/VictorMono/Victor\ Mono\ Medium\ Nerd\ Font\ Complete.ttf);
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url(../assets/fonts/FiraCode/Fira\ Code\ Medium\ Nerd\ Font\ Complete.ttf);
+}
+
+/* GLOBAL SETTINGS */
+body{
+    font-family: FiraCode, sans-serif;
+    background-color: rgb(22, 23, 24);
+    color: #95DEFF;
+}
+
+strong{
+    font-weight: 100;
+}
+
+a{
+    color: #95DEFF; 
+}
+
+h1{
+    font-family: VictorMono;
+    text-transform: uppercase;
+    font-size: 5em;
+}
+
+h2{
+    font-family: VictorMono;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+h3{
+    font-family: VictorMono;
+}
+
+/* CONTAINERS */
+.pink-italic-container{
+    background-color: #750037;
+    color: #ff4bae;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); 
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.blue-italic-container{
+    color: #95DEFF;
+    background-color: #004B6B;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); 
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.pink-container{
+    background-color: #750037;
+    color: #ff4bae;
+}
+
+.blue-container{
+    color: #95DEFF;
+    background-color: #004B6B;
+}
+
+/* BUTTONS */
+/* BLUE BUTTON */
+.blue-button{
+    background-color: #95DEFF;
+    color: #004B6B;
+    padding: 0.5rem 2rem;
+    text-align: center; 
+    border: 1px solid #95DEFF;
+    border-radius: 20px;
+    transition: all .5s ease-out;
+}
+.blue-button:hover{
+    color: #95DEFF;
+    background-color: #004B6B;
+    border: 1px dashed #95DEFF;
+    border-radius: 0px;
+}
+
+/* PINK BUTTON */
+.pink-button{
+    background-color: #ff4bae;
+    color: #750037;
+    padding: 0.5rem 2rem;
+    text-align: center; 
+    border: 1px solid #ff4bae;
+    border-radius: 20px;
+    transition: all .5s ease-out;
+}
+.pink-button:hover{
+    color: #ff4bae;
+    background-color: #750037;
+    border: 1px dashed #ff4bae;
+    border-radius: 0px;
+}
+
+/* MEDIA QUERIES GENERAUX */
+@media screen and (max-width: 1300px){
+    h1{
+        font-size: 3em;
+    }
+    h2{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 900px){
+    h1{
+        font-size: 2.5em;
+    }
+    p, li, a{
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 500px){
+    h1{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+}
+
+
