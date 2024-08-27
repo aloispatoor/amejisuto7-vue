@@ -1,5 +1,16 @@
-<script>
+<script setup>
+    import { ref } from 'vue';
+
+    // TITLE SETUP
     const title = "Amejisuto7";
+
+    // MENU BURGER SETUP
+    const isActive = ref(false);
+    function toggleMenu() {
+        isActive.value = !isActive.value;
+        console.log('Active Menu');
+    }
+    
 </script>
 
 <template>
@@ -7,7 +18,7 @@
         <div class='title blue-container'>
             <h1>{{ title }}</h1>
         </div>
-        <nav class="showNav">
+        <nav :class="{ showNav: isActive }">
             <ul class='navbar__links'>
                 <li class='navbar__item'>
                     <a href="/" class='navbar__link'>/Home</a>
@@ -22,7 +33,7 @@
                     <a href="/commission" class='navbar__link'>/Commissions</a>
                 </li>
             </ul>
-            <button class='navbar__burger'>
+            <button @click="toggleMenu" class='navbar__burger'>
                 <span class='bar'></span>
             </button>
         </nav>

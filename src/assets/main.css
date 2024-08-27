@@ -9,12 +9,12 @@
 
 @font-face {
     font-family: VictorMono;
-    src: url(../assets/fonts/VictorMono/Victor\ Mono\ Medium\ Nerd\ Font\ Complete.ttf);
+    src: url('@/assets/fonts/VictorMono/Victor Mono Medium Nerd Font Complete.ttf');
 }
 
 @font-face {
     font-family: FiraCode;
-    src: url(../assets/fonts/FiraCode/Fira\ Code\ Medium\ Nerd\ Font\ Complete.ttf);
+    src: url('@/assets/fonts/FiraCode/Fira Code Medium Nerd Font Complete.ttf');
 }
 
 /* GLOBAL SETTINGS */
@@ -33,19 +33,19 @@ a{
 }
 
 h1{
-    font-family: VictorMono;
+    font-family: VictorMono, sans-serif;
     text-transform: uppercase;
     font-size: 5em;
 }
 
 h2{
-    font-family: VictorMono;
+    font-family: VictorMono, sans-serif;
     text-transform: uppercase;
     font-size: 2.5em;
 }
 
 h3{
-    font-family: VictorMono;
+    font-family: VictorMono, sans-serif;
 }
 
 /* CONTAINERS */
