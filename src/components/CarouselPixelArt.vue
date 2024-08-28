@@ -1,52 +1,76 @@
 <script setup>
+    import { defineComponent } from 'vue'
+    import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
+    import 'vue3-carousel/dist/carousel.css';
+
+    defineComponent({
+        name: 'Breakpoints',
+        components: {
+            Carousel,
+            Slide,
+            Navigation,
+            Pagination,
+        },
+        data: () => ({
+            breakpoints: {
+                1300: {
+                    itemsToShow: 5,
+                },
+                1024: {
+                    itemsToShow: 3,
+                }
+            }
+        })
+    })
+
     const pixelArts = [
         {
             name: 'avatar',
-            src: "/img/pixelart/avatar.webp",
+            src: "avatar.webp",
             alt: 'pixel art: Robot in a synthwave style',
-            id: 0
-        },
-        {
-            name: 'geminipolis',
-            src: "/img/pixelart/Geminipolis1.webp",
-            alt: 'pixel art: Bridge in a night city',
             id: 1
         },
         {
-            name: 'burtalistJP',
-            src: "/img/pixelart/j_p.webp",
-            alt: 'pixel art: Bear avatar face to a brutalist architecture town in the night',
+            name: 'geminipolis',
+            src: "Geminipolis1.webp",
+            alt: 'pixel art: Bridge in a night city',
             id: 2
         },
         {
-            name: 'narxys',
-            src: "/img/pixelart/pa_5.webp",
-            alt: 'pixel art: Samoyed avatar face to a summer synthwave aesthetic',
+            name: 'burtalistJP',
+            src: "j_p.webp",
+            alt: 'pixel art: Bear avatar face to a brutalist architecture town in the night',
             id: 3
         },
         {
-            name: 'silver',
-            src: '/img/pixelart/pa_10.webp',
-            alt: 'pixel art: Sheep avatar face to a cyber punk city',
+            name: 'narxys',
+            src: "pa_5.webp",
+            alt: 'pixel art: Samoyed avatar face to a summer synthwave aesthetic',
             id: 4
         },
         {
-            name: 'bowie',
-            src: '/img/pixelart/pa_12.webp',
-            alt: 'pixel art: Dog avatar face to a solar punk aesthetic',
+            name: 'silver',
+            src: 'pa_10.webp',
+            alt: 'pixel art: Sheep avatar face to a cyber punk city',
             id: 5
         },
         {
-            name: 'plane',
-            src: '/img/pixelart/pa_8.webp',
-            alt: 'pixel art: plane taking off',
+            name: 'bowie',
+            src: 'pa_12.webp',
+            alt: 'pixel art: Dog avatar face to a solar punk aesthetic',
             id: 6
         },
         {
-            name: 'rubyusrubysa',
-            src: '/img/pixelart/pa_9.webp',
-            alt: 'pixel art: Rubyus and Rubysa face to a steampunk aesthetic',
+            name: 'plane',
+            src: 'pa_8.webp',
+            alt: 'pixel art: plane taking off',
             id: 7
+        },
+        {
+            name: 'rubyusrubysa',
+            src: 'pa_9.webp',
+            alt: 'pixel art: Rubyus and Rubysa face to a steampunk aesthetic',
+            id: 8
         },
     ];
 </script>
@@ -60,12 +84,18 @@
                     Here is my best <strong>pixel art</strong> features made on Aseprite.
                 </p>
             </article>
-            <div class="imgslider">
-                <img v-for="item in pixelArts" :key="item.id" :src="item.src" :alt="item.alt">
-            </div>
+            <Carousel itemsToShow="4" :breakpoints="Breakpoints" :wrapAround="true" :autoplay="3000">
+                <Slide v-for="item in pixelArts" :key="item.id">
+                    <img :src="`/img/pixelart/${item.src}`" :alt="item.alt">
+                </Slide>
+                <template #addons>
+                    <Navigation />
+                    <Pagination />
+                </template>
+            </Carousel>
         </div>
         <div class="button-container">
-                <a href="/pixelart" class="blue-button">More</a>
+            <a href="/pixelart" class="blue-button">More</a>
         </div>
     </section>
 </template>
@@ -86,13 +116,6 @@
         flex-direction: column;
     }
 
-    #pixelArtSlider .imgslider 
-    {
-        display: flex;
-        gap: 20px;
-        overflow-y: hidden;
-    }
-
     #pixelArtSlider article{
         display:flex;
         flex-direction: column;
@@ -108,10 +131,45 @@
         align-items: center;
     }
 
-    .imgslider img{
+    .carousel__slide
+    {
         width: 400px;
         height: 400px;
+    }
+
+    .carousel__slide img{
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+    }
+
+    /* RETOUCHE DU CSS DE VUE-CAROUSEL */
+    .carousel
+    {
+        padding-bottom: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel__track
+    {
+        gap: 20px;
+    }
+    button.carousel__pagination-button::after
+    {
+        background-color: #95DEFF;
+    }
+    button.carousel__pagination-button:hover::after
+    {
+        background-color: yellow;
+    }
+    .carousel__prev, .carousel__next
+    {
+        background: #004B6B;
+        border-radius: 50%;
+    }
+    svg.carousel__icon
+    {
+        fill: #95DEFF;
     }
 
     /* MEDIA QUERIES */
@@ -120,38 +178,42 @@
             flex-direction: column;
             align-items: center;
         }
-        .imgslider{
-            width: 30vw;
-            height: 50vh;
+        #pixelArtSlider
+        {
+            margin: 2em;
+        }
+        .carousel__slide
+        {
+            width: 30em;
+            height: 30em;
         }
 
-        #pixelArtSlider .button-container{
-            margin-top: 5em;
-        }
     }
     @media screen and (max-width: 900px){
         #pixelArtSlider{
             height: 100%;
-            margin: 5em;
             padding: 2.5em;
         }
         #pixelArtSlider article{
             padding: 1rem;
         }
-
-        .imgslider{
-            width: 50vw;
-            height: 50vh;
+        .carousel__slide
+        {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    @media screen and (max-width: 768px){
+        #pixelArtSlider
+        {
+            margin: 2em 0;
         }
     }
     @media screen and (max-width: 700px){
-        .imgslider{
-            width: 60vw;
-            height: 60vh;
-        }
-
-        #pixelArtSlider{
-            margin: 2em;
+        .carousel__slide
+        {
+            width: 10em;
+            height: 10em;
         }
     }
 

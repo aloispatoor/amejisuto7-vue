@@ -48,6 +48,10 @@ h3{
     font-family: VictorMono, sans-serif;
 }
 
+main {
+    padding: 5em;
+}
+
 /* CONTAINERS */
 .pink-italic-container{
     background-color: #750037;
@@ -124,6 +128,9 @@ h3{
     p, li, a{
         font-size: 0.8em;
     }
+    main {
+        padding: 3em;
+    }
 }
 @media screen and (max-width: 500px){
     h1{
@@ -131,6 +138,9 @@ h3{
     }
     h2{
         font-size: 1.5em;
+    }
+    main {
+        padding: 1em;
     }
 }
 

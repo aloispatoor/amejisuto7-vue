@@ -55,30 +55,43 @@
             flex-direction: column;
             align-items: center;
         }
-        #about .img-sizing{
+        #about article{
             width: 100%;
+            padding: 2em;
+        }
+        #about .img-sizing{
+            width: 500px;
         }
     }
     @media screen and (max-width: 900px){
-        #about article{
+        /* #about article{
             padding: 2em;
         }
         #about p{
             margin: 1em;
+        } */
+    }
+    @media screen and (max-width: 768px){
+        #about p
+        {
+            margin: 10px;
+        }
+        #about .img-sizing{
+            width: 400px;
+        }
+        #about
+        {
+            margin: unset;
         }
     }
-    @media screen and (max-width: 700px){
-        #about article{
-            padding: 1em;
-            width: 70%;
-        }
-        #about{
-            margin: 1.5em;
+    @media screen  and (max-width: 500px) {
+        #about .img-sizing{
+            width: 300px;
         }
     }
     @media screen and (max-width: 375px){
-        #about article{
-            width: 80%;
+        #about .img-sizing{
+            width: 200px;
         }
     }
 </style>
