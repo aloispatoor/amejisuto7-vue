@@ -2,70 +2,70 @@
     import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
     import 'vue3-carousel/dist/carousel.css';
 
-    const pixelArts = [
-        {
-            name: 'avatar',
-            src: "avatar.webp",
-            alt: 'pixel art: Robot in a synthwave style',
-            id: 1
-        },
-        {
-            name: 'geminipolis',
-            src: "Geminipolis1.webp",
-            alt: 'pixel art: Bridge in a night city',
-            id: 2
-        },
-        {
-            name: 'burtalistJP',
-            src: "j_p.webp",
-            alt: 'pixel art: Bear avatar face to a brutalist architecture town in the night',
-            id: 3
-        },
-        {
-            name: 'narxys',
-            src: "pa_5.webp",
-            alt: 'pixel art: Samoyed avatar face to a summer synthwave aesthetic',
-            id: 4
-        },
-        {
-            name: 'silver',
-            src: 'pa_10.webp',
-            alt: 'pixel art: Sheep avatar face to a cyber punk city',
-            id: 5
-        },
-        {
-            name: 'bowie',
-            src: 'pa_12.webp',
-            alt: 'pixel art: Dog avatar face to a solar punk aesthetic',
-            id: 6
-        },
-        {
-            name: 'plane',
-            src: 'pa_8.webp',
-            alt: 'pixel art: plane taking off',
-            id: 7
-        },
-        {
-            name: 'rubyusrubysa',
-            src: 'pa_9.webp',
-            alt: 'pixel art: Rubyus and Rubysa face to a steampunk aesthetic',
-            id: 8
-        },
-    ];
+    const furryArts = [
+    {
+        name: 'Amethyst',
+        src: "cd_3.webp",
+        alt: 'furry art: Standing up robot with a syringe and needle',
+        id: 1
+    },
+    {
+        name: 'Bunny',
+        src: "cd_6.webp",
+        alt: 'furry art: Bunny girl holding a gun',
+        id: 2
+    },
+    {
+        name: 'Saphire',
+        src: "cd_8.webp",
+        alt: 'furry art: Fire robot with a flame thrower',
+        id: 3
+    },
+    {
+        name: 'Jeanine',
+        src: "cd_10.webp",
+        alt: 'furry art: Anthropomorphic long hairs cat',
+        id: 4
+    },
+    {
+        name: 'Neuneu',
+        src: "cd_12.webp",
+        alt: 'furry art: Muscular goldfish',
+        id: 5
+    },
+    {
+        name: 'Dobermann',
+        src: "cd_13.webp",
+        alt: 'furry art: Drooling angry dobermann',
+        id: 6
+    },
+    {
+        name: 'Dobermann Final Form',
+        src: "cd_15.webp",
+        alt: 'furry art: Body Horror',
+        id: 7
+    },
+    {
+        name: 'Bear',
+        src: "cd_16.webp",
+        alt: 'furry art: Realistic furry bear',
+        id: 8
+    },
+]
 </script>
 
 <template>
-    <section id="pixelArtSlider" class="blue-container">
+    <section id="furryArtSlider" class="pink-container">
         <div class="flexbox">
             <article>
-                <h2>/pixel art</h2>
+                <h2>/furry art</h2>
                 <p>
-                    Here is my best <strong>pixel art</strong> features made on Aseprite.
+                    Here is my best <strong>furry art</strong> features made on CLIP STUDIO PAINT.
                 </p>
             </article>
             <Carousel itemsToShow="4" :wrapAround="true" :autoplay="3000">
-                <Slide v-for="item in pixelArts" :key="item.id">
-                    <img :src="`/img/pixelart/${item.src}`" :alt="item.alt">
+                <Slide v-for="item in furryArts" :key="item.id">
+                    <img :src="`/img/furryart/${item.src}`" :alt="item.alt">
                 </Slide>
                 <template #addons>
                     <Navigation />
@@ -74,27 +74,28 @@
             </Carousel>
         </div>
         <div class="button-container">
-            <a href="/pixelart" class="blue-button">More</a>
+            <a href="/furryart" class="pink-button">More</a>
         </div>
     </section>
 </template>
 
 <style>
-    #pixelArtSlider{
+    #furryArtSlider{
+        margin-top: 2em;
         padding: 5em;
         transition: all .2s ease-out;
     }
-    #pixelArtSlider:hover{
+    #furryArtSlider:hover{
         transform: translate(-5px, -5px);
         box-shadow: inset 0 100rem 100rem -100rem yellow; 
     }
 
-    #pixelArtSlider .flexbox{
+    #furryArtSlider .flexbox{
         display: flex;
         flex-direction: column;
     }
 
-    #pixelArtSlider article{
+    #furryArtSlider article{
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -103,7 +104,7 @@
         padding: 2rem;
     }
 
-    #pixelArtSlider .button-container{
+    #furryArtSlider .button-container{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -132,27 +133,27 @@
     {
         gap: 20px;
     }
-    #pixelArtSlider button.carousel__pagination-button::after
+    #furryArtSlider button.carousel__pagination-button::after
     {
-        background-color: #95DEFF;
+        background-color: #ff4bae;
     }
-    #pixelArtSlider button.carousel__pagination-button:hover::after
+    button.carousel__pagination-button:hover::after
     {
         background-color: yellow;
     }
-    .carousel__prev, .carousel__next
+    #furryArtSlider .carousel__prev, .carousel__next
     {
-        background: #004B6B;
+        background: #750037;
         border-radius: 50%;
     }
-    #pixelArtSlider svg.carousel__icon
+    #furryArtSlider svg.carousel__icon
     {
-        fill: #95DEFF;
+        fill: #ff4bae;
     }
 
     /* MEDIA QUERIES */
     @media screen and (max-width: 1300px){
-        #pixelArtSlider .flexbox{
+        #furryArtSlider .flexbox{
             flex-direction: column;
             align-items: center;
         }
@@ -164,11 +165,11 @@
 
     }
     @media screen and (max-width: 900px){
-        #pixelArtSlider{
+        #furryArtSlider{
             height: 100%;
             padding: 2.5em;
         }
-        #pixelArtSlider article{
+        #furryArtSlider article{
             padding: 1rem;
         }
         .carousel__slide
@@ -178,7 +179,7 @@
         }
     }
     @media screen and (max-width: 768px){
-        #pixelArtSlider
+        #furryArtSlider
         {
             margin: 2em 0;
         }
