@@ -19,7 +19,8 @@ const routes = [
     path: '/pixelart',
     name: 'PixelArt',
     component: PixelArt
-  }
+  },
+
 ]
 
 export default createRouter({

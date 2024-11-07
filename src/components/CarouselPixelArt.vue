@@ -1,57 +1,17 @@
 <script setup>
-    import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
+import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
+</script>
+<script>
     import 'vue3-carousel/dist/carousel.css';
+    import pixelArtList from "@/assets/pixelartlist.json";
 
-    const pixelArts = [
-        {
-            name: 'avatar',
-            src: "avatar.webp",
-            alt: 'pixel art: Robot in a synthwave style',
-            id: 1
-        },
-        {
-            name: 'geminipolis',
-            src: "Geminipolis1.webp",
-            alt: 'pixel art: Bridge in a night city',
-            id: 2
-        },
-        {
-            name: 'burtalistJP',
-            src: "j_p.webp",
-            alt: 'pixel art: Bear avatar face to a brutalist architecture town in the night',
-            id: 3
-        },
-        {
-            name: 'narxys',
-            src: "pa_5.webp",
-            alt: 'pixel art: Samoyed avatar face to a summer synthwave aesthetic',
-            id: 4
-        },
-        {
-            name: 'silver',
-            src: 'pa_10.webp',
-            alt: 'pixel art: Sheep avatar face to a cyber punk city',
-            id: 5
-        },
-        {
-            name: 'bowie',
-            src: 'pa_12.webp',
-            alt: 'pixel art: Dog avatar face to a solar punk aesthetic',
-            id: 6
-        },
-        {
-            name: 'plane',
-            src: 'pa_8.webp',
-            alt: 'pixel art: plane taking off',
-            id: 7
-        },
-        {
-            name: 'rubyusrubysa',
-            src: 'pa_9.webp',
-            alt: 'pixel art: Rubyus and Rubysa face to a steampunk aesthetic',
-            id: 8
-        },
-    ];
+    export default {
+      data() {
+        return {
+          pixelArts: pixelArtList,
+        };
+      },
+    };
 </script>
 
 <template>
