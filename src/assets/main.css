@@ -29,7 +29,7 @@ strong{
 }
 
 a{
-    color: #95DEFF; 
+    color: #95DEFF;
 }
 
 h1{
@@ -55,7 +55,7 @@ main {
 /* CONTAINERS */
 .pink-italic-container{
     background-color: #750037;
-    color: #ff4bae;
+    color: #DC86B9;
     -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); 
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
@@ -69,7 +69,7 @@ main {
 
 .pink-container{
     background-color: #750037;
-    color: #ff4bae;
+    color: #DC86B9;
 }
 
 .blue-container{
@@ -97,18 +97,18 @@ main {
 
 /* PINK BUTTON */
 .pink-button{
-    background-color: #ff4bae;
+    background-color: #DC86B9;
     color: #750037;
     padding: 0.5rem 2rem;
     text-align: center; 
-    border: 1px solid #ff4bae;
+    border: 1px solid #DC86B9;
     border-radius: 20px;
     transition: all .5s ease-out;
 }
 .pink-button:hover{
-    color: #ff4bae;
+    color: #DC86B9;
     background-color: #750037;
-    border: 1px dashed #ff4bae;
+    border: 1px dashed #DC86B9;
     border-radius: 0px;
 }
 

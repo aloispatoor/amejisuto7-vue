@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import NotFound from './views/NotFound.vue'
 import PixelArt from './views/PixelArt.vue';
+import LegalMentions from "@/views/LegalMentions.vue";
 
 const routes = [
   {
@@ -11,14 +12,19 @@ const routes = [
     component: Home
   },
   {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: NotFound
+    path: '/legal-mentions',
+    name: 'LegalMentions',
+    component: LegalMentions
   },
   {
     path: '/pixelart',
     name: 'PixelArt',
     component: PixelArt
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound
   },
 
 ]
