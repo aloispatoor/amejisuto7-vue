@@ -34,6 +34,7 @@
                 </li>
             </ul>
             <button @click="toggleMenu" class='navbar__burger'>
+                <span class="sr-only">Menu</span>
                 <span class='bar'></span>
             </button>
         </nav>

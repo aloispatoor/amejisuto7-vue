@@ -1,10 +1,15 @@
 <template>
     <footer>
         <div>
-            <p>Web site designed and developped by <a href="http://alois-patoor.ovh/" target="_blank" rel="noreferrer">Aloïs Patoor</a> - All rights reserved</p>
+            <p>Web site designed and developped by <a href="http://alois-patoor.ovh/" target="_blank" rel="noreferrer" class="underlined">Aloïs Patoor</a> - All rights reserved</p>
         </div>
         <div>
-            <p><a href="legalmentions">Legal Mentions</a> - <a href="#header">Back to the top</a></p>
+            <p>
+              <a href="/legalmentions" class="underlined">Legal Mentions</a>
+              -
+              <a href="#header" class="underlined">Back to the top</a></p>
+              -
+              <a href="/sitemap" class="underlined">Site Map</a>
         </div>
     </footer>
 </template>

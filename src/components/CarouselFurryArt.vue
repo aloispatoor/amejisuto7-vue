@@ -1,57 +1,17 @@
 <script setup>
-    import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
-    import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
+</script>
+<script>
+  import 'vue3-carousel/dist/carousel.css';
+  import furryArtList from "@/assets/furryartlist.json";
 
-    const furryArts = [
-    {
-        name: 'Amethyst',
-        src: "cd_3.webp",
-        alt: 'furry art: Standing up robot with a syringe and needle',
-        id: 1
+  export default {
+    data() {
+      return {
+        furryArts: furryArtList,
+      };
     },
-    {
-        name: 'Bunny',
-        src: "cd_6.webp",
-        alt: 'furry art: Bunny girl holding a gun',
-        id: 2
-    },
-    {
-        name: 'Saphire',
-        src: "cd_8.webp",
-        alt: 'furry art: Fire robot with a flame thrower',
-        id: 3
-    },
-    {
-        name: 'Jeanine',
-        src: "cd_10.webp",
-        alt: 'furry art: Anthropomorphic long hairs cat',
-        id: 4
-    },
-    {
-        name: 'Neuneu',
-        src: "cd_12.webp",
-        alt: 'furry art: Muscular goldfish',
-        id: 5
-    },
-    {
-        name: 'Dobermann',
-        src: "cd_13.webp",
-        alt: 'furry art: Drooling angry dobermann',
-        id: 6
-    },
-    {
-        name: 'Dobermann Final Form',
-        src: "cd_15.webp",
-        alt: 'furry art: Body Horror',
-        id: 7
-    },
-    {
-        name: 'Bear',
-        src: "cd_16.webp",
-        alt: 'furry art: Realistic furry bear',
-        id: 8
-    },
-]
+  };
 </script>
 
 <template>

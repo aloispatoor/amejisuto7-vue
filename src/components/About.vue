@@ -7,7 +7,7 @@
         <div class='img-sizing'>
             <img src="../assets/img/image.webp" alt="Illustration" />
         </div>
-        <article className='pink-container'>
+        <article class='pink-container'>
             <h2>{{ titleSection }}</h2>
             <p>
                 My name is Aloïs, I'm a <strong>french pixel and furry artist</strong>.
