@@ -73,7 +73,7 @@ a.underlined
 /* CONTAINERS */
 .pink-italic-container{
     background-color: #750037;
-    color: #ff71bc;
+    color: #DC86B9;
     -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); 
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
@@ -87,7 +87,7 @@ a.underlined
 
 .pink-container{
     background-color: #750037;
-    color: #ff4bae;
+    color: #DC86B9;
 }
 
 .blue-container{
@@ -115,18 +115,18 @@ a.underlined
 
 /* PINK BUTTON */
 .pink-button{
-    background-color: #ff71bc;
+    background-color: #DC86B9;
     color: #750037;
     padding: 0.5rem 2rem;
     text-align: center; 
-    border: 1px solid #ff71bc;
+    border: 1px solid #DC86B9;
     border-radius: 20px;
     transition: all .5s ease-out;
 }
 .pink-button:hover{
-    color: #ff71bc;
+    color: #DC86B9;
     background-color: #750037;
-    border: 1px dashed #ff71bc;
+    border: 1px dashed #DC86B9;
     border-radius: 0px;
 }
 

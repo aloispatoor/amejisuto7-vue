@@ -7,9 +7,10 @@
             <p>
               <a href="/legalmentions" class="underlined">Legal Mentions</a>
               -
-              <a href="#header" class="underlined">Back to the top</a></p>
+              <a href="#header" class="underlined">Back to the top</a>
               -
               <a href="/sitemap" class="underlined">Site Map</a>
+            </p>
         </div>
     </footer>
 </template>
@@ -27,6 +28,7 @@
 
     footer div a{
         transition: all .5s ease-out;
+        text-decoration: underline;
     }
     footer div a:hover{
         color: yellow;

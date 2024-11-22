@@ -6,6 +6,7 @@ import PixelArt from './views/PixelArt.vue';
 import FurryArt from "@/views/FurryArt.vue";
 import SiteMap from "@/views/SiteMap.vue";
 import Commission from "@/views/Commission.vue";
+import LegalMentions from "@/views/LegalMentions.vue";
 
 const routes = [
   {
@@ -14,9 +15,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: NotFound
+    path: '/legal-mentions',
+    name: 'LegalMentions',
+    component: LegalMentions
   },
   {
     path: '/pixelart',
@@ -37,6 +38,11 @@ const routes = [
     path: '/commission',
     name: 'Commission',
     component: Commission
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound
   },
 
 ]

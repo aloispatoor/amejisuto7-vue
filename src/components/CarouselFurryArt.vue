@@ -95,20 +95,21 @@ import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
     }
     #furryArtSlider button.carousel__pagination-button::after
     {
-        background-color: #ff4bae;
+        background-color: #DC86B9;
     }
     button.carousel__pagination-button:hover::after
     {
         background-color: yellow;
     }
-    #furryArtSlider .carousel__prev, .carousel__next
+    #furryArtSlider .carousel__prev,
+    #furryArtSlider .carousel__next
     {
         background: #750037;
         border-radius: 50%;
     }
     #furryArtSlider svg.carousel__icon
     {
-        fill: #ff4bae;
+        fill: #DC86B9;
     }
 
     /* MEDIA QUERIES */
