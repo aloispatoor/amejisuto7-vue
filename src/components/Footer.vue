@@ -5,11 +5,11 @@
         </div>
         <div>
             <p>
-              <a href="/legalmentions" class="underlined">Legal Mentions</a>
-              -
-              <a href="#header" class="underlined">Back to the top</a>
+              <a href="/legal-mentions" class="underlined">Legal Mentions</a>
               -
               <a href="/sitemap" class="underlined">Site Map</a>
+              -
+              <a href="#header" class="underlined">Back to the top</a>
             </p>
         </div>
     </footer>

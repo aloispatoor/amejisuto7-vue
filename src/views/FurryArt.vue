@@ -27,15 +27,15 @@
       <h2>/My Furry Arts</h2>
       <div class='modals'>
         <div id='iterationfurryart'>
-          <span role="button" @click="openModal(furryArt)" class="img-sizing" v-for="furryArt in furryArts" :key="furryArt.id">
+          <span role="button" @click="openModal(furryArt)" class="img-sizing" v-for="furryArt in furryArts" :key="furryArt.id" tabindex="0">
               <img :src="`/img/furryart/${furryArt.src}`" :alt="furryArt.alt">
           </span>
         </div>
       </div>
       <article v-if="isModalOpen" @click="closeModal" class="modal-overlay">
-        <div class="modal-body furry-modal" @click.stop>
+        <div class="modal-body furry-modal" @click.stop aria-modal="true">
           <img :src="`/img/furryart/${currentPicture.src}`" :alt="currentPicture.alt" :key="currentPicture.id" />
-          <span role="button" class="modal-close-button" @click="closeModal">✖</span>
+          <span role="button" class="modal-close-button" @click="closeModal" tabindex="0">✖</span>
         </div>
       </article>
     </section>
@@ -98,7 +98,8 @@
 }
 .furry-modal{
   width: 40%;
-  height: 80%;
+  height: auto;
+  max-height: 100%;
 }
 
 .modal-body.furry-modal img{
@@ -112,13 +113,11 @@
 @media screen and (max-width: 1300px){
   .furry-modal{
     width: 45%;
-    height: 70%;
   }
 }
 @media screen and (max-width: 900px){
   .furry-modal{
     width: 90%;
-    height: 70%;
   }
 }
 

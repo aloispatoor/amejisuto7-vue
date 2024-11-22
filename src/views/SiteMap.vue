@@ -1,8 +1,10 @@
 <script setup>
 
+import Divider from "@/components/Divider.vue";
 </script>
 
 <template>
+  <Divider />
   <main id="site-map">
     <ul>
       <li>
