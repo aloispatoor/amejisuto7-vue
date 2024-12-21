@@ -8,7 +8,7 @@
     <p>You can order me <strong>pixel art</strong> and / or <strong>digital painting furry art</strong>. Depending of what you ask and the options you wish, prices go from 15€ to 65€.</p>
     <p>You can find all the <strong>commission possibilities</strong> by clicking the following button</p>
     <div class="button-container">
-      <a href="/Commission" class="blue-button">More informations</a>
+      <a href="/commission" class="blue-button">More informations</a>
     </div>
   </section>
 </template>
