@@ -20,7 +20,7 @@ import Divider from "@/components/Divider.vue";
         <a href="/src/components/HomeCommission" class="underlined">Commissions</a>
       </li>
       <li>
-        <a href="/legalmentions" class="underlined">Legal Mentions</a>
+        <a href="/legal-mentions" class="underlined">Legal Mentions</a>
       </li>
     </ul>
   </main>
