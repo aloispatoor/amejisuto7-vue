@@ -27,17 +27,17 @@
             <h2>/My Pixel Arts</h2>
             <div class='modals'>
                 <div id='iterationpixelart'>
-                    <span role="button" @click="openModal(pixelArt)" class="img-sizing" v-for="pixelArt in pixelArts" :key="pixelArt.id" tabindex="0">
+                    <span role="button" @click="openModal(pixelArt)" @keyup.enter="openModal(pixelArt)" class="img-sizing" v-for="pixelArt in pixelArts" :key="pixelArt.id" tabindex="0">
                         <img :src="`/img/pixelart/${pixelArt.src}`" :alt="pixelArt.alt">
                     </span>
                 </div>
             </div>
-          <article v-if="isModalOpen" @click="closeModal" class="modal-overlay" aria-modal>
+          <div role="dialog" aria-modal="true" v-if="isModalOpen" @click="closeModal" class="modal-overlay">
             <div class="modal-body pixel-modal" @click.stop>
               <img :src="`/img/pixelart/${currentPicture.src}`" :alt="currentPicture.alt" :key="currentPicture.id" />
-              <span role="button" class="modal-close-button" @click="closeModal" tabindex="0">✖</span>
+              <span role="button" class="modal-close-button" @click="closeModal" @keyup.enter="closeModal" tabindex="0" aria-label="Close">✖</span>
             </div>
-          </article>
+          </div>
         </section>
     </main>
 

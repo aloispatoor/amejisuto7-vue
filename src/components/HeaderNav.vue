@@ -33,7 +33,7 @@
                     <a href="/commission" class='navbar__link'>/Commissions</a>
                 </li>
             </ul>
-            <button @click="toggleMenu" class='navbar__burger'>
+            <button @click="toggleMenu" class='navbar__burger' :aria-expanded="!!isActive">
                 <span class="sr-only">Menu</span>
                 <span class='bar'></span>
             </button>
